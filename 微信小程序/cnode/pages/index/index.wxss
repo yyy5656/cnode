@@ -1,0 +1,137 @@
+/* 导航栏 */
+.nav{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+}
+.nav image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+#nav_img{
+  margin-left: 250rpx;
+}
+.nav_text{
+  color: rgb(6, 6, 6);
+  font-size: 36rpx;
+  margin-left: 260rpx;
+}
+/* 侧边栏 */
+.subnav0{
+  display: flex;
+  position: absolute;
+  height: 1334rpx;
+}
+/* 侧边栏左边部分 */
+.subnav{
+  margin-top: -100rpx;
+  margin-left: -450rpx;
+  background-color: rgb(255, 255, 255);
+  width: 450rpx;
+} 
+.subnav_n{
+  width: 410rpx;
+  height: 90rpx;
+  font-size: 50rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: rgb(69, 69, 69);
+  border-bottom: solid 4rpx rgb(232, 232, 232);
+}
+.subnav_ng{
+  font-size: 50rpx; 
+  color: rgb(193, 193, 193);
+  padding-left: 300rpx;
+} 
+#subnav_n1g{
+  padding-left: 210rpx;
+}
+.subnav-transition {
+  transition: all 0.5s;
+  margin-left: 0rpx;
+}
+/* 右边部分 */
+.subnav_r{
+  width: 300rpx;
+  margin-top: -100rpx;
+  background-color: rgba(127, 126, 126, 0.5);
+}
+.subnav_r-none{
+  display: none;
+}
+.subnav_r-block{
+  display: block;
+}
+
+
+ /* 列表页循环box */
+ .box{
+   margin-top: 50rpx;
+   width: 100%;
+   height: 180rpx;
+   display: flex;
+   /* background-color: cadetblue; */
+ }
+ .boximg{
+   width: 120rpx;
+   /* background-color: coral; */
+ }
+ .boximg image{
+   width: 80rpx;
+   height: 80rpx;
+   border-radius: 100%;
+   margin-top: 40rpx;
+   margin-left: 20rpx;
+ }  
+
+ .boxcot{
+   width: 630rpx;
+   /* height: 180rpx; */
+   /* background-color: cornflowerblue; */
+ }
+ .boxcot_t{
+   margin-top: 15rpx;
+   display: flex;
+ }
+ .botcot_tab{
+   height: 40rpx;
+   /* width: 0rpx; */
+   background-color: rgb(27, 173, 27);
+   padding: 8rpx;
+   font-size: 30rpx;
+   color: white;
+   border-radius: 10%;
+ }
+ .botcot_taba{
+  height: 40rpx;
+  /* width: 0rpx; */
+  background-color: rgb(225, 120, 194);
+  padding: 8rpx;
+  font-size: 30rpx;
+  color: white;
+  border-radius: 10%;
+}
+ .botcot_tit{
+  margin-left: 15rpx;
+  font-size: 30rpx;
+  width: 540rpx;
+ }
+ .boxcot_b{
+   display: flex;
+   width: 570rpx;
+   font-size: 24rpx;
+   margin-top: 13rpx;
+   color: gray;
+ }
+ .boxcot_b text{
+   width: auto;
+   margin-left: 25rpx;
+ }
+ .boxcot_b text:first-child{
+  margin-left: 0rpx;
+ }
+ .boxcot_b text:last-child{
+   word-break:break-all;
+ }
+

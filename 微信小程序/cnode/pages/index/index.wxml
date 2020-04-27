@@ -1,0 +1,46 @@
+<!-- 格式化时间格式 -->
+<wxs module="tutil" src="../../utils/filter.wxs"></wxs>
+<view>
+<!-- 导航栏 -->
+  <view class="nav">
+    <image src="../../icon/a1.png"  bindtap="triggerTransition" id="nav_img1"></image>
+    <text class="nav_text">全部</text>
+    <image src="../../icon/b.png" id="nav_img"></image>
+  </view>
+  <!-- 侧边栏 -->
+
+  <view class="subnav0">
+    <!-- 这个空格一定要有  -->
+    <!-- navigator中的url跳转页面 -->
+    <view class="subnav {{extraClasses}}">
+     <navigator class="subnav_n">全部<text decode="true" class="subnav_ng">&gt;</text></navigator>
+     <navigator class="subnav_n">精华<text decode="true" class="subnav_ng">&gt;</text></navigator>
+     <navigator class="subnav_n">分享<text decode="true" class="subnav_ng">&gt;</text></navigator>
+     <navigator class="subnav_n">问答<text decode="true" class="subnav_ng">&gt;</text></navigator>
+     <navigator class="subnav_n">招聘<text decode="true" class="subnav_ng">&gt;</text></navigator>
+     <navigator class="subnav_n">客户端测试<text decode="true" class="subnav_ng" id="subnav_n1g">&gt;</text></navigator>
+    </view>
+    <view class="subnav_r {{dis}}"bindtap="touchstart"></view>
+  </view>
+
+<view wx:for="{{list}}" wx:key="id">
+  <navigator class="box"  url="/pages/titcont/titcont?id={{item.id}}">
+    <view class="boximg"><image src="{{item.author.avatar_url}}"></image></view>
+    <view class="boxcot">
+      <view class="boxcot_t">
+        <view class="botcot_tab" wx:if="{{item.tab=='share'&&!item.top}}">分享</view>
+        <view class="botcot_taba" wx:if="{{item.tab=='ask'&&!item.top}}">问答</view>
+        <view class="botcot_tab" wx:if="{{item.top}}">置顶</view>
+        <view class="botcot_tit">{{item.title}}</view>
+      </view>
+      <view class="boxcot_b">
+        <text>{{item.author.loginname}}</text>
+        <text>{{item.reply_count}}/{{item.visit_count}}</text>
+        <!-- 格式化时间 -->
+        <text>创建时间:{{tutil.formatTime(item.create_at)}}</text>
+      </view> 
+    </view>
+  </navigator>
+</view>
+  </view>
+  

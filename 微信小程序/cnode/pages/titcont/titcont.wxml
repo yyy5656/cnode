@@ -1,0 +1,12 @@
+<view class="titcot">
+  <view class="titcot_top">{{listcon.title}}
+  </view>
+  <view class="titcot_cen">
+    <text>•{{listcon.create_at}} •作者:{{listcon.author.loginname}} •{{listcon.visit_count}}次浏览 •来自{{listcon.tab}}</text>
+    <text wx:if='{{!listcon.is_collect}}' class="iconfont icon-shoucang" catchtap="collect"></text>
+    <text wx:if='{{listcon.is_collect}}' class="iconfont icon-shoucang1" catchtap="collect"></text>
+  </view>
+  <view class="titcot_cotent">
+    <rich-text nodes="{{listcon.content}}"></rich-text>
+  </view>
+</view>
